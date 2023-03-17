@@ -15,7 +15,12 @@ const images = [
 
 let imageIndex = 0;
 
+const imageElement = document.getElementById('imageElement');
+
 setInterval(() => {
-    // console.log(imageIndex);
-    imageIndex++
-}, 1000);
+    const imageUrl = images[imageIndex];
+    // console.log(imageIndex, imageUrl);
+    imageElement.setAttribute('src', imageUrl)
+    imageIndex < 8 ? imageIndex++ : imageIndex = 0;
+
+}, 2000);
